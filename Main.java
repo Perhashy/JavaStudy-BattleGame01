@@ -25,7 +25,7 @@ public class Main {
           Battle.playerTurn();
         } else {
           // 逃げ成功判定（仮で出力）
-          System.out.println("逃げるのに失敗した");
+          Battle.escape();
         }
       } catch (InputMismatchException e) {
         System.out.println("逃げるのに失敗した");
