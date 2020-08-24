@@ -20,14 +20,20 @@ public class Main {
     try {
       int command = sc.nextInt();
       System.out.println(command);
+      if (command == 1) {
+        // 先制攻撃
+        System.out.println("あなたの攻撃！：１のダメージ！");
+        computerHP--;
+        System.out.println("敵HP：" + computerHP);
+      } else {
+        // 逃げ成功判定（仮で出力）
+        System.out.println("逃げるのに失敗した");
+      }
     } catch (InputMismatchException e) {
       System.out.println("逃げるのに失敗した");
     }
 
     do {
-      System.out.println("冒険者が敵に１のダメージ！");
-      computerHP--;
-      System.out.println("敵HP：" + computerHP);
       if (computerHP != 0) {
         System.out.println("敵が冒険者に１のダメージ！");
         playerHP--;
