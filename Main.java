@@ -14,26 +14,24 @@ public class Main {
     System.out.println("敵HP：" + computerHP);
     System.out.println("");
 
-    Scanner sc = new Scanner(System.in);
-    System.out.println("どうする？");
-    System.out.print("(1：攻撃、2：逃げる)：");
-    try {
-      int command = sc.nextInt();
-      System.out.println(command);
-      if (command == 1) {
-        // 先制攻撃
-        System.out.println("あなたの攻撃！：１のダメージ！");
-        computerHP--;
-        System.out.println("敵HP：" + computerHP);
-      } else {
-        // 逃げ成功判定（仮で出力）
+    do {
+      Scanner sc = new Scanner(System.in);
+      System.out.println("どうする？");
+      System.out.print("(1：攻撃、2：逃げる)：");
+      try {
+        int command = sc.nextInt();
+        if (command == 1) {
+          // 先制攻撃
+          System.out.println("あなたの攻撃！：１のダメージ！");
+          computerHP--;
+          System.out.println("敵HP：" + computerHP);
+        } else {
+          // 逃げ成功判定（仮で出力）
+          System.out.println("逃げるのに失敗した");
+        }
+      } catch (InputMismatchException e) {
         System.out.println("逃げるのに失敗した");
       }
-    } catch (InputMismatchException e) {
-      System.out.println("逃げるのに失敗した");
-    }
-
-    do {
       if (computerHP != 0) {
         System.out.println("敵が冒険者に１のダメージ！");
         playerHP--;
