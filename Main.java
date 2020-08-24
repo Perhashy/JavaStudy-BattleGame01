@@ -22,7 +22,7 @@ public class Main {
         int command = sc.nextInt();
         if (command == 1) {
           // 先制攻撃
-          Battle.playerTurn(computerHP);
+          Battle.playerTurn();
         } else {
           // 逃げ成功判定（仮で出力）
           System.out.println("逃げるのに失敗した");
@@ -31,16 +31,7 @@ public class Main {
         System.out.println("逃げるのに失敗した");
       }
 
-      if (computerHP > 0) {
-        System.out.println("敵の攻撃！：１のダメージ！");
-        playerHP--;
-        System.out.println("あなたのHP：" + playerHP);
-        if (playerHP <= 0) {
-          System.out.println("敵に倒された");
-        }
-      } else {
-        System.out.println("敵を倒した！");
-      }
+      Battle.computerTurn();
     } while(playerHP > 0 && computerHP > 0);
   }
 }
