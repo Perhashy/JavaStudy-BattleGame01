@@ -32,15 +32,16 @@ public class Main {
       } catch (InputMismatchException e) {
         System.out.println("逃げるのに失敗した");
       }
-      if (computerHP != 0) {
-        System.out.println("敵が冒険者に１のダメージ！");
+
+      if (computerHP > 0) {
+        System.out.println("敵の攻撃！：１のダメージ！");
         playerHP--;
-        System.out.println("冒険者HP：" + playerHP);
-        if (playerHP == 0) {
+        System.out.println("あなたのHP：" + playerHP);
+        if (playerHP <= 0) {
           System.out.println("敵に倒された");
         }
       } else {
-        System.out.println("敵を倒した");
+        System.out.println("敵を倒した！");
       }
     } while(playerHP > 0 && computerHP > 0);
   }
