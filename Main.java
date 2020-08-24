@@ -1,6 +1,7 @@
 package battle01;
 
 import java.util.Scanner;
+import java.util.InputMismatchException;
 
 public class Main {
   public static void main(String[] args) {
@@ -16,8 +17,13 @@ public class Main {
     Scanner sc = new Scanner(System.in);
     System.out.println("どうする？");
     System.out.print("(1：攻撃、2：逃げる)：");
-    int command = sc.nextInt();
-    System.out.println(command);
+    try {
+      int command = sc.nextInt();
+      System.out.println(command);
+    } catch (InputMismatchException e) {
+      System.out.println("逃げるのに失敗した");
+    }
+
     do {
       System.out.println("冒険者が敵に１のダメージ！");
       computerHP--;
