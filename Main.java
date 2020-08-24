@@ -1,5 +1,7 @@
 package battle01;
 
+import java.util.Scanner;
+
 public class Main {
   public static void main(String[] args) {
     int playerHP = 5;
@@ -8,8 +10,14 @@ public class Main {
     System.out.println("敵が現れた！");
     System.out.println("");
     System.out.println("(*ﾟ▽ﾟ*)");
+    System.out.println("敵HP：" + computerHP);
     System.out.println("");
 
+    Scanner sc = new Scanner(System.in);
+    System.out.println("どうする？");
+    System.out.print("(1：攻撃、2：逃げる)：");
+    int command = sc.nextInt();
+    System.out.println(command);
     do {
       System.out.println("冒険者が敵に１のダメージ！");
       computerHP--;
