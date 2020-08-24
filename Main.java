@@ -32,6 +32,6 @@ public class Main {
       }
 
       Battle.computerTurn();
-    } while(playerHP > 0 && computerHP > 0);
+    } while(Battle.check());
   }
 }

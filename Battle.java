@@ -20,5 +20,12 @@ public class Battle {
     }
   }
 
-  
+  public static boolean check() {
+    if ((Character.playerHP > 0) &&
+        (Character.computerHP > 0)) {
+          return true;
+    } else {
+      return false;
+    }
+  }
 }
