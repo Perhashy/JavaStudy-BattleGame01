@@ -6,14 +6,11 @@ public class Battle {
   public static void escape() {
     Random random = new Random();
     int escape = random.nextInt(3);
-    switch (escape) {
-      case 0:
-        System.out.println("逃げることに成功した！");
-        System.exit(0);
-      case 1:
-        System.out.println("逃げることに失敗した");
-      default:
-        System.out.println("逃げることに失敗した");
+    if (escape == 1) {
+      System.out.println("逃げることに成功した！");
+      System.exit(0);
+    } else {
+      System.out.println("逃げることに失敗した");
     }
   }
 
