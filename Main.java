@@ -33,6 +33,6 @@ public class Main {
       }
 
       Battle.computerTurn(player, computer);
-    } while(Battle.check());
+    } while(Battle.check(player.getHp(), computer.getHp()));
   }
 }

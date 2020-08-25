@@ -35,9 +35,9 @@ public class Battle {
     }
   }
 
-  public static boolean check() {
-    if ((Character.playerHP > 0) &&
-        (Character.computerHP > 0)) {
+  public static boolean check(int player, int computer) {
+    if ((player > 0) &&
+        (computer > 0)) {
           return true;
     } else {
       return false;
