@@ -9,6 +9,9 @@ public class Main {
     Character computer = new Character();
 
     System.out.println(player.hp);
+    System.out.println(player.attack);
+    System.out.println(computer.hp);
+    System.out.println(computer.attack);
 
     System.out.println("敵が現れた！");
     System.out.println("");
