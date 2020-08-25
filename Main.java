@@ -5,13 +5,10 @@ import java.util.InputMismatchException;
 
 public class Main {
   public static void main(String[] args) {
-    int playerHP = Character.playerHP;
-    int computerHP = Character.computerHP;
-
     System.out.println("敵が現れた！");
     System.out.println("");
     System.out.println("(*ﾟ▽ﾟ*)");
-    System.out.println("敵HP：" + computerHP);
+    System.out.println("敵HP：" + Character.computerHP);
     System.out.println("");
 
     do {
