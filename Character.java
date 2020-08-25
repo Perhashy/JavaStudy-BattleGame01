@@ -15,6 +15,10 @@ public class Character {
     this.attack = arrayAttack[random.nextInt(3)];
   }
 
+  public void setHp(int hp) {
+    this.hp = hp;
+  }
+
   public int getHp() {
     return this.hp;
   }

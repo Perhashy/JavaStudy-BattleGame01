@@ -14,10 +14,11 @@ public class Battle {
     }
   }
 
-  public static void playerTurn() {
-    System.out.println("あなたの攻撃！：１のダメージ！");
-    Character.computerHP--;
-    System.out.println("敵HP：" + Character.computerHP);
+  public static void playerTurn(Character player, Character computer) {
+    System.out.println("あなたの攻撃！：" + player.getAttack() + "のダメージ！");
+    int hp = computer.getHp() - player.getAttack();
+    computer.setHp(hp);
+    System.out.println("敵HP：" + computer.getHp());
   }
 
   public static void computerTurn() {

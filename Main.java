@@ -8,15 +8,11 @@ public class Main {
     Character player = new Character();
     Character computer = new Character();
 
-    System.out.println(player.getHp());
-    System.out.println(player.getAttack());
-    System.out.println(computer.getHp());
-    System.out.println(computer.getAttack());
-
+    System.out.println("あなたHP：" + player.getHp());
     System.out.println("敵が現れた！");
     System.out.println("");
     System.out.println("(*ﾟ▽ﾟ*)");
-    System.out.println("敵HP：" + Character.computerHP);
+    System.out.println("敵HP：" + computer.getHp());
     System.out.println("");
 
     do {
@@ -27,7 +23,7 @@ public class Main {
         int command = sc.nextInt();
         if (command == 1) {
           // 先制攻撃
-          Battle.playerTurn();
+          Battle.playerTurn(player, computer);
         } else {
           // 逃げ成功判定（仮で出力）
           Battle.escape();
