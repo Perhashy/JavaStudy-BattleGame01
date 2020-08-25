@@ -21,12 +21,13 @@ public class Battle {
     System.out.println("敵HP：" + computer.getHp());
   }
 
-  public static void computerTurn() {
-    if (Character.computerHP > 0) {
-      System.out.println("敵の攻撃！：１のダメージ！");
-      Character.playerHP--;
-      System.out.println("あなたのHP：" + Character.playerHP);
-      if (Character.playerHP <= 0) {
+  public static void computerTurn(Character player, Character computer) {
+    if (computer.getHp() > 0) {
+      System.out.println("敵の攻撃！：" + computer.getAttack() + "のダメージ！");
+      int hp = player.getHp() - computer.getAttack();
+      player.setHp(hp);
+      System.out.println("あなたのHP：" + player.getHp());
+      if (player.getHp() <= 0) {
         System.out.println("敵に倒された");
       }
     } else {

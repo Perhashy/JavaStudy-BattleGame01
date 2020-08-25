@@ -32,7 +32,7 @@ public class Main {
         System.out.println("逃げるのに失敗した");
       }
 
-      Battle.computerTurn();
+      Battle.computerTurn(player, computer);
     } while(Battle.check());
   }
 }
