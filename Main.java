@@ -8,10 +8,10 @@ public class Main {
     Character player = new Character();
     Character computer = new Character();
 
-    System.out.println(player.hp);
-    System.out.println(player.attack);
-    System.out.println(computer.hp);
-    System.out.println(computer.attack);
+    System.out.println(player.getHp());
+    System.out.println(player.getAttack());
+    System.out.println(computer.getHp());
+    System.out.println(computer.getAttack());
 
     System.out.println("敵が現れた！");
     System.out.println("");
