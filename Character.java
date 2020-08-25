@@ -11,8 +11,8 @@ public class Character {
 
   public Character() {
     Random random = new Random();
-    this.hp = arrayHp[random.nextInt(3)];
-    this.attack = arrayAttack[random.nextInt(3)];
+    this.hp = arrayHp[random.nextInt(arrayHp.length)];
+    this.attack = arrayAttack[random.nextInt(arrayAttack.length)];
   }
 
   public void setHp(int hp) {
@@ -26,8 +26,4 @@ public class Character {
   public int getAttack() {
     return this.attack;
   }
-
-  protected static int playerHP = 5;
-  protected static int computerHP = 8;
-
 }
