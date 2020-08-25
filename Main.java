@@ -8,19 +8,22 @@ public class Main {
     Character player = new Character();
     Character computer = new Character();
 
-    System.out.println("あなたHP：" + player.getHp());
+    System.out.println("--------------------------------");
     System.out.println("敵が現れた！");
-    System.out.println("");
+    System.out.println("--------------------------------" + "\n");
     System.out.println("(*ﾟ▽ﾟ*)");
-    System.out.println("敵HP：" + computer.getHp());
-    System.out.println("");
+    System.out.println("敵HP：" + computer.getHp() + "\n");
+    System.out.println("--------------------------------");
+    System.out.println("あなたHP：" + player.getHp());
 
     do {
       Scanner sc = new Scanner(System.in);
+      System.out.println("--------------------------------");
       System.out.println("どうする？");
       System.out.print("(1：攻撃、2：逃げる)：");
       try {
         int command = sc.nextInt();
+        System.out.println("--------------------------------");
         if (command == 1) {
           // 先制攻撃
           Battle.playerTurn(player, computer);

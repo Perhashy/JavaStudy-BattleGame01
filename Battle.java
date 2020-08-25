@@ -28,9 +28,11 @@ public class Battle {
       player.setHp(hp);
       System.out.println("あなたのHP：" + player.getHp());
       if (player.getHp() <= 0) {
+        System.out.println("--------------------------------");
         System.out.println("敵に倒された");
       }
     } else {
+      System.out.println("--------------------------------");
       System.out.println("敵を倒した！");
     }
   }
