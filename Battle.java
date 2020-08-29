@@ -14,6 +14,17 @@ public class Battle {
     }
   }
 
+  public static void hit(Character player, Character computer, int hit) {
+    Random random = new Random();
+    int rate = random.nextInt(101);
+    if (hit >= rate) {
+      playerTurn(player, computer);
+    } else {
+      System.out.println("攻撃をはずした");
+      System.out.println("敵HP：" + computer.getHp());
+    }
+  }
+
   public static void playerTurn(Character player, Character computer) {
     System.out.println("あなたの攻撃！：" + player.getAttack() + "のダメージ！");
     int hp = computer.getHp() - player.getAttack();
