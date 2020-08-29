@@ -14,22 +14,18 @@ public class Battle {
     }
   }
 
-  public static void hit(Character player, Character computer, int hit) {
+  public static void playerTurn(Character player, Character computer) {
     Random random = new Random();
     int rate = random.nextInt(101);
-    if (hit >= rate) {
-      playerTurn(player, computer);
+    if (player.getHit() >= rate) {
+      System.out.println("あなたの攻撃！：" + player.getAttack() + "のダメージ！");
+      int hp = computer.getHp() - player.getAttack();
+      computer.setHp(hp);
+      System.out.println("敵HP：" + computer.getHp());
     } else {
-      System.out.println("攻撃をはずした");
+      System.out.println("あなたの攻撃！：攻撃をはずした");
       System.out.println("敵HP：" + computer.getHp());
     }
-  }
-
-  public static void playerTurn(Character player, Character computer) {
-    System.out.println("あなたの攻撃！：" + player.getAttack() + "のダメージ！");
-    int hp = computer.getHp() - player.getAttack();
-    computer.setHp(hp);
-    System.out.println("敵HP：" + computer.getHp());
   }
 
   public static void computerTurn(Character player, Character computer) {
