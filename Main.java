@@ -14,7 +14,10 @@ public class Main {
     System.out.println("(*ﾟ▽ﾟ*)");
     System.out.println("敵HP：" + computer.getHp() + "\n");
     System.out.println("--------------------------------");
-    System.out.println("あなたHP：" + player.getHp());
+    System.out.println("＜あなたステータス＞");
+    System.out.println("HP    ：" + player.getHp());
+    System.out.println("攻撃力：" + player.getAttack());
+    System.out.println("命中率：" + player.getHit() + "％");
 
     do {
       Scanner sc = new Scanner(System.in);
