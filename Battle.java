@@ -30,13 +30,20 @@ public class Battle {
 
   public static void computerTurn(Character player, Character computer) {
     if (computer.getHp() > 0) {
-      System.out.println("敵の攻撃！：" + computer.getAttack() + "のダメージ！");
-      int hp = player.getHp() - computer.getAttack();
-      player.setHp(hp);
-      System.out.println("あなたのHP：" + player.getHp());
-      if (player.getHp() <= 0) {
-        System.out.println("--------------------------------");
-        System.out.println("敵に倒された");
+      Random random = new Random();
+      int rate = random.nextInt(101);
+      if (computer.getHit() >= rate) {
+        System.out.println("敵の攻撃！：" + computer.getAttack() + "のダメージ！");
+        int hp = player.getHp() - computer.getAttack();
+        player.setHp(hp);
+        System.out.println("あなたのHP：" + player.getHp());
+        if (player.getHp() <= 0) {
+          System.out.println("--------------------------------");
+          System.out.println("敵に倒された");
+        }
+      } else {
+        System.out.println("敵の攻撃！：攻撃をはずした");
+        System.out.println("あなたのHP：" + player.getHp());
       }
     } else {
       System.out.println("--------------------------------");
