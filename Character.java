@@ -29,4 +29,8 @@ public class Character {
   public int getAttack() {
     return this.attack;
   }
+
+  public int getHit() {
+    return this.hitRate;
+  }
 }
